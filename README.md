@@ -2,12 +2,18 @@
 
 
 
+
+
+
 ## Authors :
 - Mahiedine Ferdjoukh
 - Hamza bikine
 
 
-### Description du projet : 
+
+
+
+## Utilité du projet : 
 
 Le projet Guava sur GitHub est une bibliothèque open-source développée par Google. Voici une analyse de ses fonctionnalités et de son utilité : 
 
@@ -42,6 +48,15 @@ Le projet Guava sur GitHub est une bibliothèque open-source développée par Go
 #### Bibliothèque de graphiques:
  
     Guava inclut également une bibliothèque de graphiques pour faciliter la manipulation et l'analyse de graphiques de données.
+
+
+
+
+
+
+
+
+
 
 
 
