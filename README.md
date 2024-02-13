@@ -2,14 +2,9 @@
 
 
 
-
-
-
 ## Authors :
 - Mahiedine Ferdjoukh
 - Hamza bikine
-
-
 
 
 
@@ -23,8 +18,10 @@ Pour exécuter un exemple, vous pouvez suivre ces étapes :
 
     1- Placez-vous à la racine du projet.
     2- Compilez l'ensemble du projet en utilisant la commande suivante :
-
+    
+```
 mvn compile
+```
 
     Vous pouvez ensuite essayer de lancer le programme situé dans le répertoire jhotdraw-samples/jhotdraw-samples-misc/src/main/java/org/jhotdraw/samples/draw/Main.java.
 
