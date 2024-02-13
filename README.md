@@ -27,6 +27,22 @@ mvn compile
 
 Pour simplifier le processus et éviter les complications liées à l'utilisation de la commande java en ligne de commande, vous pouvez également lancer le programme directement depuis un environnement de développement intégré (IDE) tel qu'Eclipse.
 
+## Description du projet : 
+
+
+Le projet est accompagné d'un *readme*, cependant, il ne contient pas de instructions explicites sur la manière d'utiliser la bibliothèque.  
+
+La documentation du projet est générée à l'aide de Javadoc. Pour générer cette documentation, vous pouvez exécuter la commande suivante à la racine du projet :
+
+```
+mvn javadoc:javadoc
+```
+
+Pour consulter la documentation de l'API du projet, il suffit d'ouvrir le fichier `jhotdraw-api/target/site/apidocs/index.html` dans un navigateur web.
+
+Étant donné que ce projet est conçu comme une bibliothèque, il n'est pas nécessaire de l'installer. Pour l'utiliser dans votre propre projet, vous pouvez simplement l'importer en l'ajoutant aux dépendances de votre projet, par exemple en spécifiant ces dépendances dans le fichier POM si votre projet utilise Maven.
+
+
 
 
 
