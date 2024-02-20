@@ -69,8 +69,25 @@ En ce qui concerne les bibliothèques réellement utilisées, l'utilisation de J
 
 Il est également pertinent de noter que l'utilisation de JUnit et le retrait de la bibliothèque "testing" suggèrent un ajustement récent dans les choix technologiques du projet. Cette transition peut indiquer une volonté d'adopter des normes de test plus standardisées et mieux soutenues par la communauté, ce qui peut améliorer la maintenabilité du code à long terme. En outre, cela pourrait refléter une volonté d'optimiser les dépendances du projet en éliminant celles qui sont redondantes ou moins utilisées, ce qui contribue à simplifier la structure du projet et à réduire sa complexité.
 
+### 4.2 Organisation des packages
 
+Il y a un total de 13 packages.
 
+Des relations cycliques existent entre certains packages, telles que celles observées entre les packages `org.jhotdraw.draw.action` et `org.jhotdraw.draw`.
+
+La profondeur maximale des packages est fixée à 4, comme illustré par le package `org.jhotdraw.draw.action`.
+
+La structure hiérarchique des packages de test reflète celle des packages sources.
+
+En général, les noms des packages ne fournissent pas nécessairement d'informations sur les *design patterns* utilisés. Cependant, il existe quelques exceptions notables :
+- Le package `org.jhot.draw.event` suggère l'utilisation du *pattern observable*.
+- Le package `org.jhotdraw.draw.decoration` suggère l'utilisation du *pattern decorator*.
+
+En dehors de ces cas, certains packages contiennent des classes qui suivent des *design patterns* qui ne sont pas explicitement indiqués par leur nom. Par exemple, le packages `org.jhotdraw.draw.figure.Figure` implémente les *patterns* *Composite*, *Framework*, *Decorator*, *Observer*, *Prototype*, *Strategy*, entre autres. Le terme "figure" dans le nom du package ne reflète pas nécessairement l'utilisation de ces *patterns*.
+
+De manière similaire à l'exemple précédent (`org.jhotdraw.draw.figure.Figure`), il serait ardu d'avoir des noms de packages toujours très explicites quant aux *design patterns* utilisés par leurs classes. Une telle approche conduirait, par exemple, à des noms de packages excessivement longs.
+
+Pour pallier ce manque d'information, les *design patterns* implémentés sont généralement spécifiés dans la documentation Java (Javadoc) de chaque classe. Cependant, cette pratique rend la compréhension du code plus complexe, car il est nécessaire de consulter fréquemment la Javadoc.
 
 
 
