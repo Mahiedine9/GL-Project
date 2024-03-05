@@ -90,8 +90,27 @@ De manière similaire à l'exemple précédent (`org.jhotdraw.draw.figure.Figure
 Pour pallier ce manque d'information, les *design patterns* implémentés sont généralement spécifiés dans la documentation Java (Javadoc) de chaque classe. Cependant, cette pratique rend la compréhension du code plus complexe, car il est nécessaire de consulter fréquemment la Javadoc.
 
 
+### 4.3 Répartition des classes dans les packages
 
+La diversité du nombre de classes par paquetage est notable. À titre d'exemple, le paquetage `org.jhotdraw.draw.action` abrite le plus grand nombre de classes, atteignant 33. Cette abondance pourrait s'expliquer par la multitude de possibilités d'"actions" qu'il offre. En contraste, le paquetage `org.jhotdraw.draw.print` contient seulement une classe, car la majeure partie du travail lié à l'impression est déjà pris en charge par la bibliothèque Java `java.awt.print`.
 
+En ce qui concerne le nombre total de classes dans le noyau (`core`):
+- *TOTAL*: 193 classes
+- *Total de classes par packages:*
+- `org.jhotdraw.draw`: 22
+- `org.jhotdraw.draw.action`: 33
+- `org.jhotdraw.draw.connector`: 10
+- `org.jhotdraw.draw.decoration`: 6
+- `org.jhotdraw.draw.event`: 25
+- `org.jhotdraw.draw.figure`: 27
+- `org.jhotdraw.draw.handle`: 25
+- `org.jhotdraw.draw.io`: 7
+- `org.jhotdraw.draw.layouter`: 5
+- `org.jhotdraw.draw.liner`: 4
+- `org.jhotdraw.draw.locator`: 7
+- `org.jhotdraw.draw.print`: 1
+- `org.jhotdraw.draw.text`: 2
+- `org.jhotdraw.draw.tool`: 19
 
 
 
