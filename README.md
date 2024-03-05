@@ -151,7 +151,19 @@ Bien que certaines méthodes puissent contenir un grand nombre de lignes, en gé
 Dans cette même classe, on remarque la présence de méthodes renvoyant des codes d'erreur, bien que ces méthodes déclenchent ultimement une exception dans un bloc `catch`. Une approche alternative pourrait consister à créer une méthode englobante qui fait appel à ces méthodes tout en gérant les exceptions, plutôt que d'inclure des blocs `try` dans chaque méthode individuelle.
 
 
+## 6 Nettoyage de Code et Code Smells
 
+### 6.1 Règles de nommages
+
+Les noms de classes sont aisément prononçables et présentent une clarté suffisante. Il est rare de constater l'utilisation d'abréviations dans ces noms. De plus, les conventions de nommage Java sont respectées de manière adéquate.
+
+Par ailleurs, les appellations semblent être des termes relevant du domaine de l'imagerie 2D et de l'édition d'image, englobant des concepts tels que "Rectangle", "Drawing", "Translation", "Rotation", "Bezier", "Perpendicular", "Figure", "Image", "View", "Editor" et autres.
+
+Ainsi, il apparaît que le processus de nomination ne requiert pas nécessairement d'amélioration, puisque les termes choisis sont pertinents et conformes aux standards du domaine.
+
+### 6.2 Nombre magique
+
+Des occurrences de nombres magiques sont observées dans le code, spécifiquement dans `org.jhotdraw.draw.decoration.PerpendicularBar.java`, au sein des méthodes `getDecoratorPathRadius` et `PerpendicularBar`.
 
 ### 6.3 Organisation du code
 
