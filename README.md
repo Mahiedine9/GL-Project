@@ -140,6 +140,15 @@ Le projet souffre d'un taux significatif de duplication de code, représentant 1
 
 Le projet compte un nombre non négligeable de "classes monolithiques", avec certaines classes dépassant largement les conventions recommandées en termes de taille et de complexité. Ces classes comportent un nombre élevé de méthodes, variables d'instances et lignes de code, ce qui peut rendre la maintenance et l'extension du code plus difficiles. La répartition inégale des importations externes dans ces classes suggère une forte dépendance et une complexité accrue.
 
+### 5.6 Analyse des méthodes
+
+La complexité cyclomatique des classes varie de 1 à 499, avec une moyenne de 21 par classe, ce qui se traduit par une moyenne beaucoup moins élevée par méthode. Cependant, cela ne signifie pas nécessairement l'absence de méthodes présentant une complexité cyclomatique élevée.
+
+Lorsque cela se produit, il est observé que le nombre de commentaires destinés à décrire les différents cas est souvent limité, principalement en raison de la prédominance de la documentation Javadoc.
+
+Bien que certaines méthodes puissent contenir un grand nombre de lignes, en général, la longueur des méthodes n'est pas excessive. De plus, la plupart du temps, le nombre d'arguments par méthode ne dépasse pas 3, même pour les classes les plus volumineuses. C'est le cas, par exemple, de **jhotdraw-samples/jhotdraw-samples-misc/src/main/java/org/jhotdraw/samples/svg/io/SVGInputFormat.java**, la classe présentant le plus grand nombre de lignes de code et la plus grande complexité cyclomatique.
+
+Dans cette même classe, on remarque la présence de méthodes renvoyant des codes d'erreur, bien que ces méthodes déclenchent ultimement une exception dans un bloc `catch`. Une approche alternative pourrait consister à créer une méthode englobante qui fait appel à ces méthodes tout en gérant les exceptions, plutôt que d'inclure des blocs `try` dans chaque méthode individuelle.
 
 
 
