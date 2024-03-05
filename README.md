@@ -114,5 +114,36 @@ En ce qui concerne le nombre total de classes dans le noyau (`core`):
 
 
 
+## Analyse approfondie
+
+### 5.1 Évaluation des tests
+
+Le projet affiche une faible couverture de tests, avec seulement deux ensembles de tests, `AbstractFigureNGTest` dans `jhotdraw-core` et `BezierPathNGTest` dans `jhotdraw-utils`. Ces tests ne représentent que 0.2% du code total, ce qui est insuffisant pour assurer une robustesse adéquate. En outre, la répartition des tests dans seulement deux des neuf répertoires du projet signifie qu'une grande partie du code n'est pas soumise à des tests unitaires.
+
+Bien que les tests actuels réussissent tous sans erreur d'assertion, il est nécessaire d'augmenter considérablement la couverture des tests pour garantir la qualité du logiciel.
+
+### 5.2 Annotations
+
+Le projet compte un total de 22 111 lignes d'annotations, ce qui représente environ 21.5% du code. La majorité de ces annotations sont des Javadoc, avec une proportion significative de licences. Le code lui-même est peu annoté, à l'exception de quelques sections mises en annotation.
+
+Étant donné que le développement du projet est en pause depuis deux ans, il est peu probable que l'ajout d'annotations supplémentaires soit nécessaire à ce stade.
+
+### 5.3 Obsolescence
+
+Il y a peu de codes obsolètes dans le projet. Ceux qui existent sont principalement localisés dans quelques fichiers spécifiques. De plus, bien qu'il y ait des appels à des méthodes ou des classes obsolètes, ceux-ci semblent provenir d'imports externes et ne sont pas utilisés dans le code du projet lui-même.
+
+### 5.4 Duplication de code
+
+Le projet souffre d'un taux significatif de duplication de code, représentant 16.8% du code total. Cette duplication est présente dans plusieurs dossiers du projet, avec des fichiers entiers montrant une structure similaire et du code répété. La consolidation de ces duplications, par exemple en utilisant l'héritage ou la création de classes abstraites, pourrait grandement améliorer la maintenabilité du code.
+
+### 5.5 Classes monolithiques
+
+Le projet compte un nombre non négligeable de "classes monolithiques", avec certaines classes dépassant largement les conventions recommandées en termes de taille et de complexité. Ces classes comportent un nombre élevé de méthodes, variables d'instances et lignes de code, ce qui peut rendre la maintenance et l'extension du code plus difficiles. La répartition inégale des importations externes dans ces classes suggère une forte dépendance et une complexité accrue.
+
+
+
+
+
+
 
 
