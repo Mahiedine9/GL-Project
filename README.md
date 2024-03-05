@@ -153,6 +153,15 @@ Dans cette même classe, on remarque la présence de méthodes renvoyant des cod
 
 
 
+### 6.3 Organisation du code
 
+   Afin de simplifier l'analyse, concentrons-nous sur un seul package représentatif de l'ensemble. Prenons par exemple le package org.jhotdraw.draw.decoration. Ce package comprend 1 interface, 1 classe abstraite et 4 classes concrètes. Bien qu'il y ait quelques exceptions où des méthodes publiques sont placées après des méthodes protégées (par exemple, dans PerpendicularBar.java, AbstractLineDecoration.java), en règle générale, les méthodes publiques, plus utilisées, précèdent celles qui sont protégées / privées.
 
+### 6.4 Code inutilisé
+
+   Globalement, il n'y a pas de code inutilisé. Cependant, une petite exception concerne jhotdraw-app/src/main/java/org/jhotdraw/app/AbstractApplication.java, où la méthode privée initComponents() n'est pas utilisée.
+
+### 6.5 Duplication de code
+
+   Pour l'ensemble du code source de jhotdraw, SonarQube indique un taux de duplication de 16.8 %. Plus spécifiquement, pour le répertoire jhotdraw-core, le taux de duplication est de 14.7 %.
 
